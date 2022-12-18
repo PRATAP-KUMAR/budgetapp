@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+  font-family: 'Proxima_Nova';
+  src: url('Proxima Nova Font.otf');
+}
+
+body {
+  background-color: azure;
+  font-family: 'Proxima_Nova', sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+  .homepage-h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 60vh;
+    color: blue;
+    margin: 0;
+    padding: 0;
+  }
+
+  .homepage-h1:hover {
+    color: #ff9100;
+  }
+}
