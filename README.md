@@ -116,11 +116,12 @@ gem install rails
 
 ### Usage
 
-To run the project, execute the following command:
+To run the project, execute the following command from the root directory:
 
 ```sh
   rails server
 ```
+then open any browser and enter this address `localhost:3000`
 
 ### Run tests
 
@@ -148,9 +149,7 @@ Not yet deployed
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Setup and controllers
-- [ ] Controllers specs
-- [ ] Creating a data model
+- N/A as it is the school curriculum project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -176,8 +175,8 @@ If you like this project kindly give a start to this repository
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank [Microverse](https://www.microverse.org/)  
-Credits to [Gregoire Vella](https://www.behance.net/gregoirevella)
+- I would like to thank [Microverse](https://www.microverse.org/)  
+- Credits to [Gregoire Vella](https://www.behance.net/gregoirevella)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -200,6 +199,6 @@ Credits to [Gregoire Vella](https://www.behance.net/gregoirevella)
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./MIT.md) licensed.  
-This project is [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/)
+This project is [Creative Commons](https://creativecommons.org/licenses/by-nc/4.0/) lincensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
