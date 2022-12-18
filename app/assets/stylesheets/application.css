@@ -20,23 +20,45 @@
 }
 
 body {
-  background-color: azure;
   font-family: 'Proxima_Nova', sans-serif;
+  background-color: rgb(132, 151, 170);
 }
 
-@media only screen and (max-width: 600px) {
-  .homepage-h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 60vh;
-    color: blue;
-    margin: 0;
-    padding: 0;
-  }
+button,
+input[type="submit"] {
+  background: none;
+  color: #fff;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
 
-  .homepage-h1:hover {
-    color: #ff9100;
-  }
+input {
+  all: unset;
+  background-color: #fff;
+  text-align: left;
+  border: 0.2px solid #c0bcbc;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #fff;
 }

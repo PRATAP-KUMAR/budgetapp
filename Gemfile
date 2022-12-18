@@ -73,4 +73,6 @@ end
 
 # Add myself
 
+gem 'devise'
+gem 'letter_opener', group: :development
 gem 'rubocop', '>= 1.0', '< 2.0'

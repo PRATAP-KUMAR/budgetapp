@@ -1,0 +1,17 @@
+.homepage-h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 60vh;
+  color: #434b54;
+  margin: 0;
+  padding: 0;
+}
+
+.login-sign-up {
+  background-color: #3778c2;
+  padding: 20px;
+  margin: 5px;
+  text-align: center;
+}

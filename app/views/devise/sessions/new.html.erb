@@ -1,0 +1,30 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class=login-page>
+    <div class=flex-row-sb>
+      <%= link_to 'Back', root_path%>
+      <div class=text>
+        LOGIN PAGE
+      </div>
+      <%= f.submit "Log in" %>
+    </div>
+    
+    <div>
+      <div class=email-input>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: 'input-field' %>
+      </div>
+      <div class=email-input>
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: 'input-field' %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class=forgot-pw>
+  <%= link_to 'Forgot Password?', new_user_password_path, class: 'forgot-pw-a' %>
+</div>
+
+
+
+
+

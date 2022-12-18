@@ -1,0 +1,7 @@
+Hello World!!!
+
+<% if user_signed_in? %>
+    <li><%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete, data: {turbo: false} %></li>
+<% else %>
+    <li><%= link_to 'SIGN IN' %></li>
+<% end %>
