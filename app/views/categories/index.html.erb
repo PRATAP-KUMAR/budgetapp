@@ -1,7 +1,9 @@
-Hello World!!!
+you are on categories index page
 
 <% if user_signed_in? %>
-    <li><%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete, data: {turbo: false} %></li>
-<% else %>
-    <li><%= link_to 'SIGN IN' %></li>
+  <%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete, data: {turbo: false} %>
 <% end %>
+
+<% @categories.each do |x| %>
+  <%= x.categorie.name %>
+<% end  %>
