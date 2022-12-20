@@ -1,9 +1,37 @@
-you are on categories index page
-
-<% if user_signed_in? %>
-  <%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete, data: {turbo: false} %>
-<% end %>
-
-<% @categories.each do |x| %>
-  <%= x.categorie.name %>
-<% end  %>
+<div class=topbar>
+  <div class=date>
+    <%= Time.now.to_date %>
+  </div>
+  <div class=title>
+    CATEGORIES
+  </div>
+  <% if user_signed_in? %>
+    <div>
+      <%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete, data: {turbo: false}, class: 'link-white' %>
+    </div>
+  <% end %>
+</div>
+<div class=categorie-container>
+  <% @categories.each_with_index do |categorie, idx| %>
+    <%= link_to category_path(categorie), class: 'cards' do %>
+      <div class=categorie-card>
+        <div class=column>
+          <img src="<%= categorie.icon %>" width=60 height=60>
+        </div>
+        <div class=column>
+          <%= categorie.name %>
+        </div>
+        <div class=column>
+          <% if idx >= @totals.length %>
+            0
+          <% else %>
+            <%= @totals[idx] %>$ spent
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  <div class=link-margin>
+    <%= link_to 'CREATE CATEGORIE', new_category_path, class: 'link-style' %>
+  </div>
+</div>

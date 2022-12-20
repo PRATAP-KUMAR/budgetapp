@@ -1,0 +1,31 @@
+.topbar {
+  display: flex;
+  background-color: #3778c2;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.link-style,
+.link-style:visited {
+  background-color: #3778c2;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 2px;
+  transition: all 0.3s;
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.link-style:hover {
+  transform: translateY(-3px);
+  background-color: #fff;
+  color: #3778c2;
+  box-shadow: 3px 5px 7px rgba(70, 70, 70, 0.556);
+}
+
+.link-style:active {
+  box-shadow: 1px 2px 4px rgba(70, 70, 70, 0.556);
+  transform: translateY(3px);
+}

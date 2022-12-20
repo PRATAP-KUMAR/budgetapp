@@ -1,0 +1,58 @@
+.topbar {
+  display: flex;
+  background-color: #3778c2;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.date,
+.title,
+.link-white {
+  color: #fff;
+  font-size: 12px;
+}
+
+.title {
+  color: #fff;
+  font-size: 18px;
+}
+
+.categorie-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.cards {
+  width: 100%;
+}
+
+.categorie-card {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.2px solid #3778c2;
+  width: 100%;
+  padding: 5px;
+}
+
+.column {
+  width: 33.33%;
+}
+
+.column:first-of-type {
+  text-align: left;
+}
+
+.column:last-of-type {
+  text-align: right;
+}
+
+.link-margin {
+  margin-top: 20px;
+}

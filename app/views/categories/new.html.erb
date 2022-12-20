@@ -1,0 +1,10 @@
+Create a new Categorie
+<%= form_with model: @categorie, local: true do |f| %>
+  <p>
+    <%= f.text_field :name, placeholder: 'Name' %>
+  </p>
+  <p>
+    <%= f.text_field :icon, placeholder: 'Image URL' %>
+  </p>
+  <%= f.submit 'Submit', data: {turbo: false} %>
+<% end %>

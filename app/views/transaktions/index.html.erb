@@ -1,0 +1,13 @@
+<div class=topbar>
+  <div>
+    <%= link_to 'BACK', authenticated_root_path %>
+  </div>
+  <div>
+    TRANSACTIONS
+  </div>
+  <% if user_signed_in? %>
+    <div>
+      <%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete, data: {turbo: false} %>
+    </div>
+  <% end %>
+</div>
