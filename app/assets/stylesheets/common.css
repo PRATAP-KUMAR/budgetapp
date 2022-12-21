@@ -1,10 +1,7 @@
-.topbar {
-  display: flex;
-  background-color: #3778c2;
-  height: 60px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
+.center-single-div {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
 }
 
 .link-style,

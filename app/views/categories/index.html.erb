@@ -1,19 +1,22 @@
 <div class=topbar>
-  <div class=date>
-    <%= Time.now.to_date %>
+  <div class=column>
+    <p>
+      Signed in as
+    </p>
+    <%= @author.email %>
   </div>
   <div class=title>
     CATEGORIES
   </div>
   <% if user_signed_in? %>
-    <div>
+    <div class=column>
       <%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete, data: {turbo: false}, class: 'link-white' %>
     </div>
   <% end %>
 </div>
 <div class=categorie-container>
-  <% @categories.each_with_index do |categorie, idx| %>
-    <%= link_to category_path(categorie), class: 'cards' do %>
+  <% @categories.each do |categorie| %>
+    <%= link_to category_transaktions_path(categorie.id), class: 'cards' do %>
       <div class=categorie-card>
         <div class=column>
           <img src="<%= categorie.icon %>" width=60 height=60>
@@ -22,11 +25,7 @@
           <%= categorie.name %>
         </div>
         <div class=column>
-          <% if idx >= @totals.length %>
-            0
-          <% else %>
-            <%= @totals[idx] %>$ spent
-          <% end %>
+          <%= categorie.categorie_transaktions.sum {|x| x.transaktion.amount } %>$
         </div>
       </div>
     <% end %>

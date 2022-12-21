@@ -10,9 +10,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :categories, only: [:index, :new, :create, :show] do
+  resources :categories, only: [:index, :new, :create] do
     resources :transaktions, only: [:index, :new, :create] do
-      resources :categories_transaktions, only:[:index]
+      resources :categorie_transaktions, only: [:create]
     end
   end
 end

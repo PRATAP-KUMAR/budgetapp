@@ -1,13 +1,44 @@
 <div class=topbar>
-  <div>
-    <%= link_to 'BACK', authenticated_root_path %>
+  <div class=column>
+    <%= link_to 'BACK', authenticated_root_path, class: 'link-white' %>
   </div>
-  <div>
+  <div class=title>
     TRANSACTIONS
   </div>
   <% if user_signed_in? %>
-    <div>
-      <%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete, data: {turbo: false} %>
+    <div class=column>
+      <%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete, data: {turbo: false}, class: 'link-white' %>
     </div>
   <% end %>
+</div>
+<div class=whitebar>
+  <div>
+    Total Amount
+  </div>
+  <div>
+    <%= @categorie.categorie_transaktions.sum {|x| x.transaktion.amount } %>$
+  </div>
+</div>
+<div class=categorie-container>
+  <% @transaktions.each do |transaktion| %>
+    <div class=categorie-card>
+      <div class=space-between>
+        <p>
+          <%= transaktion.name %>
+        </p>
+        <p>
+          <%= transaktion.amount %>$
+        </p>
+      </div>
+    </div>
+  <% end %>
+  <div class=link-margin>
+    <%= link_to 'CREATE TRANSACTION', new_category_transaktion_path(params[:category_id]), class: 'link-style' %>
+  </div>
+</div>
+<div class=center-single-div>
+  <img src="<%= @categorie.icon %>" width=30 height=30>
+  <p>
+    You are looking at <%= @categorie.name %> Categorie transactions
+  </p>
 </div>

@@ -1,24 +1,8 @@
 class CategoriesController < ApplicationController
-  before_action :set_user
+  before_action :set_author
+
   def index
-    # @categories = Transaktion.first.categorie_transaktions.each { |x| x.categorie }
     @categories = Categorie.all
-    @categorie_total = 0
-    @totals = []
-    @categories.each_with_index do |categorie, _idx|
-      if categorie.categorie_transaktions.length.positive?
-        # categorie.categorie_transaktions.transaktion.amount
-        categorie.categorie_transaktions.each_with_index do |some, idx|
-          if @totals[idx]
-            @totals[idx] += some.transaktion.amount
-          else
-            @totals[idx] = some.transaktion.amount
-          end
-        end
-      else
-        []
-      end
-    end
   end
 
   def new
@@ -35,7 +19,7 @@ class CategoriesController < ApplicationController
 
   def create
     @categorie = Categorie.new(categorie_params)
-    @categorie.author = @user
+    @categorie.author = @author
     if @categorie.save
       redirect_to categories_path
     else
@@ -52,6 +36,6 @@ end
 
 private
 
-def set_user
-  @user = current_user
+def set_author
+  @author = current_user
 end

@@ -1,0 +1,14 @@
+Create a new Transaction
+<%= form_with model: @transaktion, url: category_transaktions_path, local: true do |f| %>
+  <p>
+    <%= f.text_field :name, placeholder: 'Name' %>
+  </p>
+  <p>
+    <%= f.text_field :amount, placeholder: 'Amount' %>
+  </p>
+  <p>
+    <%= f.text_field :id, placeholder: 'Categorie_Id' %>
+  </p>
+  Available categories are: 
+  <%= f.submit 'Submit', data: {turbo: false} %>
+<% end %>
