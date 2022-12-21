@@ -16,7 +16,7 @@
     Total Amount
   </div>
   <div>
-    <%= @categorie.categorie_transaktions.sum {|x| x.transaktion.amount } %>$
+    <%= @categorie.transaktions.sum {|x| x.amount } %>$
   </div>
 </div>
 <div class=categorie-container>

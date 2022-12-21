@@ -10,5 +10,8 @@ Create a new Transaction
     <%= f.text_field :id, placeholder: 'Categorie_Id' %>
   </p>
   Available categories are: 
+  <% @categories.each do |x| %>
+    <%= x.id %>
+  <% end %>
   <%= f.submit 'Submit', data: {turbo: false} %>
 <% end %>

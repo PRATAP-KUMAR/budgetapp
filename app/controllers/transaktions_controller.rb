@@ -2,12 +2,13 @@ class TransaktionsController < ApplicationController
   before_action :set_author
 
   def index
-    @categorie = Categorie.find(params[:category_id])
-    @transaktions = @author.transaktions.all
+    @categories = @author.categories
+    @categorie = @categories.find(params[:category_id])
+    @transaktions = @categorie.transaktions
   end
 
   def new
-    @categories = Categorie.all
+    @categories = @author.categories
     @categorie = Categorie.find(params[:category_id])
     @transaktion = Transaktion.new
   end

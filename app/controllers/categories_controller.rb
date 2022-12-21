@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   before_action :set_author
 
   def index
-    @categories = Categorie.all
+    @categories = @author.categories
   end
 
   def new
