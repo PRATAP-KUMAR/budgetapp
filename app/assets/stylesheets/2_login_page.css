@@ -1,0 +1,63 @@
+.login-page {
+  text-align: center;
+}
+
+.flex-row-sb {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3778c2;
+  align-items: center;
+  height: 50px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  background-color: #3778c2;
+  height: 50px;
+  align-items: center;
+}
+
+.grid-item {
+  align-items: center;
+}
+
+.text {
+  font-size: 20px;
+  color: #fff;
+}
+
+.back-arrow {
+  height: 16px;
+  padding: 0 12px;
+  justify-content: left;
+}
+
+.grid-item:first-child {
+  text-align: left;
+}
+
+.grid-item:last-child {
+  text-align: right;
+  padding: 0 12px;
+}
+
+.input-field {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-bottom: 0.1px solid #3778c2;
+  padding: 0 12px;
+}
+
+.forgot-pw > a:link,
+.forgot-pw > a:visited,
+.forgot-pw > a:hover,
+.forgot-pw > a:active {
+  display: flex;
+  font-size: 16px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 40px;
+  color: #434b54;
+}

@@ -1,17 +1,23 @@
-.homepage-h1 {
+.app-name {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   min-height: 60vh;
-  color: #434b54;
   margin: 0;
   padding: 0;
+  font-family: 'Lobster', sans-serif;
 }
 
-.login-sign-up {
+.login,
+.signup {
   background-color: #3778c2;
   padding: 20px;
   margin: 5px;
   text-align: center;
+}
+
+.signup:any-link {
+  background-color: transparent;
+  color: #434b54;
 }

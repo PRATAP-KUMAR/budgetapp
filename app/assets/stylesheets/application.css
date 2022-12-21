@@ -24,9 +24,14 @@
   src: url('Proxima Nova Font.otf');
 }
 
+@font-face {
+  font-family: 'Lobster';
+  src: url('Lobster Regular 400.ttf');
+}
+
 body {
   font-family: 'Proxima_Nova', sans-serif;
-  background-color: #eee;
+  background-color: #efefef;
   color: #434b54;
   margin-bottom: 20px;
 }
@@ -34,7 +39,7 @@ body {
 button,
 input[type="submit"] {
   background: none;
-  color: #434b54;
+  color: #fff;
   border: none;
   padding: 0;
   font: inherit;
@@ -67,5 +72,5 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-  color: #434b54;
+  color: #fff;
 }
