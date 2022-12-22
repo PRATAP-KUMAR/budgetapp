@@ -71,7 +71,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Not applicable yet](https://loom.com)
+- [Loom Video Link](https://www.loom.com/share/3dee4d0a6097447ba72065ec0c1a5325)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,7 +129,7 @@ Tests not yet implemented
 
 ### Deployment
 
-Not yet deployed
+- [This Budget App is Deployed through Render](https://budgetapp-07il.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
