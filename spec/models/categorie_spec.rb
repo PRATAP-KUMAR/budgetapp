@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Categorie', type: :model do
   before(:each) do
     @user = User.new(name: 'someone', email: 'someone@email.com', password: 'password')
-    @user.confirm
+    # @user.confirm
     @categorie = Categorie.create(author: @user, name: 'FOOD', icon: 'some/fancy/url')
   end
 

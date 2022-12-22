@@ -7,7 +7,7 @@ RSpec.describe 'Categories', type: :feature do
       email: 'someuser@email.com',
       password: 'password'
     )
-    @user.confirm
+    # @user.confirm
     @categorie = Categorie.create(
       author: @user,
       name: 'GARDEN MANAGMENT',
