@@ -5,4 +5,8 @@ class Categorie < ApplicationRecord
 
   validates :name, presence: true, length: { maximum: 25 }
   validates :icon, presence: true, length: { maximum: 250 }
+
+  def name_with_initial
+    'pratap'
+  end
 end

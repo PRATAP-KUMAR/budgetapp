@@ -1,6 +1,6 @@
 <div class=topbar>
   <div class=column>
-    <%= link_to 'BACK', authenticated_root_path, class: 'link-white' %>
+    <%= link_to image_tag(asset_path('back-arrow-icon.svg'), class: 'back-arrow'), authenticated_root_path %>
   </div>
   <div class=title>
     TRANSACTIONS
@@ -20,8 +20,8 @@
   </div>
 </div>
 <div class=categorie-container>
-  <% @transaktions.each do |transaktion| %>
-    <div class=categorie-card>
+  <% @transaktions.order(created_at: :desc).each do |transaktion| %>
+    <div class=transaktion-card>
       <div class=space-between>
         <p>
           <%= transaktion.name %>

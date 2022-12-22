@@ -6,7 +6,7 @@
     <%= @author.email %>
   </div>
   <div class=title>
-    CATEGORIES
+    CATAGORIES
   </div>
   <% if user_signed_in? %>
     <div class=column>
@@ -22,15 +22,19 @@
           <img src="<%= categorie.icon %>" width=60 height=60>
         </div>
         <div class=column>
-          <%= categorie.name %>
+          <div class=c434b54>
+            <%= categorie.name %>
+          </div>
         </div>
         <div class=column>
-          <%= categorie.categorie_transaktions.sum {|x| x.transaktion.amount } %>$
+          <div class=c434b54>
+            <%= categorie.categorie_transaktions.sum {|x| x.transaktion.amount } %>$
+          </div>
         </div>
       </div>
     <% end %>
   <% end %>
   <div class=link-margin>
-    <%= link_to 'CREATE CATEGORIE', new_category_path, class: 'link-style' %>
+    <%= link_to 'CREATE CATAGORIE', new_category_path, class: 'link-style' %>
   </div>
 </div>

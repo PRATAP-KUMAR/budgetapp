@@ -45,6 +45,10 @@
   padding: 5px;
 }
 
+.categorie-card:hover {
+  background-color: #3778c2;
+}
+
 .column:first-of-type {
   text-align: left;
 }
@@ -55,4 +59,13 @@
 
 .link-margin {
   margin-top: 20px;
+}
+
+.c434b54 {
+  color: #434b54;
+}
+
+.note {
+  text-align: center;
+  margin: 20px;
 }

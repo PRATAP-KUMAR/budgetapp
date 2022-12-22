@@ -9,6 +9,10 @@ class TransaktionsController < ApplicationController
 
   def new
     @categories = @author.categories
+    @cat = []
+    @categories.each do |x|
+      @cat << x.name
+    end
     @categorie = Categorie.find(params[:category_id])
     @transaktion = Transaktion.new
   end
@@ -19,7 +23,7 @@ class TransaktionsController < ApplicationController
     return unless @transaktion.save
 
     @categorie_transaktion = CategorieTransaktion.new(transaktion: @transaktion, categorie: @categorie)
-    redirect_to authenticated_root_path if @categorie_transaktion.save
+    redirect_to category_transaktions_path(cat_params) if @categorie_transaktion.save
   end
 
   private
