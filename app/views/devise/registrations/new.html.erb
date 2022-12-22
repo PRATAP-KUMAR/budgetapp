@@ -1,0 +1,26 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class=login-page>
+    <div class=grid-container>
+      <div class=grid-item>
+        <%= link_to image_tag(asset_path('back-arrow-icon.svg'), class: 'back-arrow'), authenticated_root_path %>
+      </div>
+      <div class=grid-item>
+        <div class=text>
+          REGISTER
+        </div>
+      </div>
+      <div class=grid-item>
+        <%= f.submit "NEXT", data: {turbo: false} %>
+      </div>
+    </div>
+    <div class="email-input">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Full name', class: 'input-field'  %>
+    </div>
+    <div class="email-input">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'input-field'  %>
+    </div>
+    <div class="email-input">
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password', class: 'input-field'  %>
+    </div>
+  <% end %>

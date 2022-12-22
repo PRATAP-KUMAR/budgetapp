@@ -1,0 +1,23 @@
+.app-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 60vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lobster', sans-serif;
+}
+
+.login,
+.signup {
+  background-color: #3778c2;
+  padding: 20px;
+  margin: 5px;
+  text-align: center;
+}
+
+.signup:any-link {
+  background-color: transparent;
+  color: #434b54;
+}
