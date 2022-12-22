@@ -15,7 +15,7 @@
   <%= f.text_field :name, placeholder: 'Name', class: 'input-field' %>
   <%= f.text_field :amount, placeholder: 'Amount', class: 'input-field' %>
   <div class=jc-center>
-    <%= f.select :id, options_for_select(@categories.collect { | x | [x.name, x.id] }), class: 'drop-down' %>
+    <%= f.select :id, options_for_select(@categories.collect { | x | [x.name, x.id] })%>
   </div>
 <% end %>
 <div class=note>

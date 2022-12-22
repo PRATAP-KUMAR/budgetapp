@@ -40,7 +40,7 @@ body {
 button,
 input[type="submit"] {
   background: none;
-  color: #fff;
+  color: #434b54;
   border: none;
   padding: 0;
   font: inherit;
@@ -73,5 +73,5 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-  color: #fff;
+  color: #434b54;
 }

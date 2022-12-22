@@ -1,21 +1,5 @@
-.topbar {
-  display: flex;
-  background-color: #3778c2;
-  height: 60px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-}
-
 .column {
   width: 33.33%;
-}
-
-.topbar > .column,
-.title,
-.link-white {
-  color: #fff;
-  font-size: 12px;
 }
 
 .title {
@@ -35,7 +19,7 @@
 }
 
 .cards:hover {
-  background-color: #1a65bb8a;
+  background-color: #3778c22e;
 }
 
 .categorie-card {

@@ -1,12 +1,12 @@
-<div class=topbar>
-  <div class=column>
+<div class=grid-container>
+  <div class=grid-item>
     <%= link_to image_tag(asset_path('back-arrow-icon.svg'), class: 'back-arrow'), authenticated_root_path %>
   </div>
-  <div class=title>
+  <div class='grid-item text'>
     TRANSACTIONS
   </div>
   <% if user_signed_in? %>
-    <div class=column>
+    <div class=grid-item>
       <%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete, data: {turbo: false}, class: 'link-white' %>
     </div>
   <% end %>
@@ -33,7 +33,7 @@
     </div>
   <% end %>
   <div class=link-margin>
-    <%= link_to 'CREATE TRANSACTION', new_category_transaktion_path(params[:category_id]), class: 'link-style' %>
+    <%= link_to 'Add a new Transaction', new_category_transaktion_path(params[:category_id]), class: 'link-style' %>
   </div>
 </div>
 <div class=center-single-div>

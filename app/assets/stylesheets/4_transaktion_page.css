@@ -6,6 +6,7 @@
   background-color: #fff;
   padding: 5px;
   border-bottom: 0.2px solid #3778c2;
+  font-size: 18px;
 }
 
 .div-center {
@@ -31,7 +32,7 @@
 }
 
 .transaktion-card:nth-child(odd) {
-  background-color: #dee7e73a;
+  background-color: #3778c22e;
 }
 
 .jc-center {
@@ -39,10 +40,4 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-*:required {
-  justify-content: center;
-  color: cyan;
-  background-color: aquamarine;
 }

@@ -1,15 +1,15 @@
-<div class=topbar>
-  <div class=column>
+<div class=grid-container>
+  <div class=grid-item>
     <p>
       Signed in as
     </p>
     <%= @author.email %>
   </div>
-  <div class=title>
+  <div class='grid-item text'>
     CATAGORIES
   </div>
   <% if user_signed_in? %>
-    <div class=column>
+    <div class=grid-item>
       <%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete, data: {turbo: false}, class: 'link-white' %>
     </div>
   <% end %>
@@ -35,6 +35,6 @@
     <% end %>
   <% end %>
   <div class=link-margin>
-    <%= link_to 'CREATE CATAGORIE', new_category_path, class: 'link-style' %>
+    <%= link_to 'Add a new Categorie', new_category_path, class: 'link-style' %>
   </div>
 </div>
