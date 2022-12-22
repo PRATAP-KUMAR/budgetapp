@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Transaktion', type: :model do
   before(:each) do
     @user = User.new(name: 'someone', email: 'someone@email.com', password: 'password')
-    @user.confirm
+    # @user.confirm
     @categorie = Categorie.create(author: @user, name: 'FOOD', icon: 'some/fancy/url')
     @transaktion = Transaktion.create(author: @user, name: 'lunch', amount: 20)
   end

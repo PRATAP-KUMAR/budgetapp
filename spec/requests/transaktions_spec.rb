@@ -7,7 +7,7 @@ RSpec.describe 'Transaktions', type: :request do
       email: 'someuser@email.com',
       password: 'password'
     )
-    @user.confirm
+    # @user.confirm
     sign_in @user
     @categorie = Categorie.create(
       author: @user,
