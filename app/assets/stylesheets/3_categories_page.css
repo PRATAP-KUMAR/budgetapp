@@ -34,6 +34,10 @@
   width: 100%;
 }
 
+.cards:hover {
+  background-color: #1a65bb8a;
+}
+
 .categorie-card {
   flex-grow: 1;
   flex-basis: 0;
@@ -43,11 +47,6 @@
   border-bottom: 0.2px solid #3778c2;
   width: 100%;
   padding: 5px;
-}
-
-.categorie-card:hover {
-  background-color: #3778c2;
-  opacity: 0.85;
 }
 
 .column:first-of-type {

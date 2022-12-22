@@ -34,7 +34,14 @@
   background-color: #dee7e73a;
 }
 
-.drop-down {
+.jc-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+*:required {
   justify-content: center;
   color: cyan;
   background-color: aquamarine;

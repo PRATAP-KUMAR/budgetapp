@@ -14,7 +14,9 @@
   </div>
   <%= f.text_field :name, placeholder: 'Name', class: 'input-field' %>
   <%= f.text_field :amount, placeholder: 'Amount', class: 'input-field' %>
-  <%= f.select :id, options_for_select(@categories.collect { | x | [x.name, x.id] }, { class: 'drop-down' }) %>
+  <div class=jc-center>
+    <%= f.select :id, options_for_select(@categories.collect { | x | [x.name, x.id] }), class: 'drop-down' %>
+  </div>
 <% end %>
 <div class=note>
   Hi <%= @author.name %>, you are creating a Transaction.
