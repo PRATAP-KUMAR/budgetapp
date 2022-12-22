@@ -28,7 +28,7 @@
         </div>
         <div class=column>
           <div class=c434b54>
-            <%= categorie.categorie_transaktions.sum {|x| x.transaktion.amount } %>$
+            <%= categorie.categorie_transaktions.includes([:transaktion]).sum {|x| x.transaktion.amount } %>$
           </div>
         </div>
       </div>

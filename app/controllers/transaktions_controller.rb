@@ -2,7 +2,10 @@ class TransaktionsController < ApplicationController
   before_action :set_author
 
   def index
-    @categories = @author.categories
+    # N+1
+    # @categories = @author.categories
+    @categories = @author.categories.includes([:transaktions])
+    # N+1 ENDS
     @categorie = @categories.find(params[:category_id])
     @transaktions = @categorie.transaktions
   end
