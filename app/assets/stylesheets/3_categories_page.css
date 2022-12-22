@@ -47,6 +47,7 @@
 
 .categorie-card:hover {
   background-color: #3778c2;
+  opacity: 0.85;
 }
 
 .column:first-of-type {
