@@ -125,8 +125,9 @@ To run the project, execute the following command from the root directory:
 then open any browser and enter this address `localhost:3000`
 
 ### Run tests
-
-Tests not yet implemented
+````sh
+rspec
+````
 
 ### Deployment
 
