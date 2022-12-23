@@ -1,0 +1,43 @@
+.whitebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  background-color: #fff;
+  padding: 5px;
+  border-bottom: 0.2px solid #3778c2;
+  font-size: 18px;
+}
+
+.div-center {
+  text-align: center;
+  width: 100%;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.transaktion-card {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.2px solid #3778c2;
+  width: 100%;
+  padding: 5px;
+}
+
+.transaktion-card:nth-child(odd) {
+  background-color: #3778c22e;
+}
+
+.jc-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

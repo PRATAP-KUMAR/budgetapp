@@ -1,0 +1,28 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class=login-page>
+    <div class=grid-container>
+      <div class=grid-item>
+        <%= link_to image_tag(asset_path('back-arrow-icon.svg'), class: 'back-arrow'), authenticated_root_path %>
+      </div>
+      <div class=grid-item>
+        <div class=text>
+          LOGIN
+        </div>
+      </div>
+      <div class=grid-item>
+        <%= f.submit "Log In" %>
+      </div>
+    </div>
+    <div>
+      <div class=email-input>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: 'input-field' %>
+      </div>
+      <div class=email-input>
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: 'input-field' %>
+      </div>
+    </div>
+  </div>
+<% end %>
+<div class=forgot-pw>
+  <%= link_to 'Forgot password ?', new_user_password_path %>
+</div>

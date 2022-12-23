@@ -1,0 +1,44 @@
+<div class=grid-container>
+  <div class=grid-item>
+    <%= link_to image_tag(asset_path('back-arrow-icon.svg'), class: 'back-arrow'), authenticated_root_path %>
+  </div>
+  <div class='grid-item text'>
+    TRANSACTIONS
+  </div>
+  <% if user_signed_in? %>
+    <div class=grid-item>
+      <%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete, data: {turbo: false}, class: 'link-white' %>
+    </div>
+  <% end %>
+</div>
+<div class=whitebar>
+  <div>
+    Total Amount
+  </div>
+  <div>
+    <%= @categorie.transaktions.sum {|x| x.amount } %>$
+  </div>
+</div>
+<div class=categorie-container>
+  <% @transaktions.order(created_at: :desc).each do |transaktion| %>
+    <div class=transaktion-card>
+      <div class=space-between>
+        <p>
+          <%= transaktion.name %>
+        </p>
+        <p>
+          <%= transaktion.amount %>$
+        </p>
+      </div>
+    </div>
+  <% end %>
+  <div class=link-margin>
+    <%= link_to 'Add a new Transaction', new_category_transaktion_path(params[:category_id]), class: 'link-style' %>
+  </div>
+</div>
+<div class=center-single-div>
+  <img src="<%= @categorie.icon %>" width=30 height=30>
+  <p>
+    You are looking at <%= @categorie.name %> Categorie transactions
+  </p>
+</div>
